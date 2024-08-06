@@ -7,7 +7,7 @@ inherit bash-completion-r1 cargo
 DESCRIPTION="A cat(1) clone with wings."
 HOMEPAGE="https://github.com/sharkdp/bat"
 SRC_URI="https://github.com/sharkdp/bat/tarball/fc9546854f5a7b38823f4990453c6cde386bfd3b -> bat-0.24.0-fc95468.tar.gz
-https://distfiles.macaronios.org/df/9a/8d/df9a8d124f5824433b0a12f9dc682c874b7818cd12ab304bc7b161cdcafc411bdbf61f4eff041f56b353aebb7d91f05be498ad12d5ad683f7ca5e678f977fa9f -> bat-0.24.0-funtoo-crates-bundle-b185fd188c488b36cf1f89328f61b9f604691e249fabb53f22f15bcece386a82fc9686a45c53f776f83fde6edfdd8e0318763ba93013200253305eb0a2f1a583.tar.gz"
+https://distfiles.macaronios.org/63/14/aa/6314aaa996b9088b213590fd1207244e120004aafe020adb8ccc0e3371a4a89b37defd9260c5ed90b07eaa7294b459042f156c4a16a0060b9082eebb77db4241 -> bat-0.24.0-funtoo-crates-bundle-b185fd188c488b36cf1f89328f61b9f604691e249fabb53f22f15bcece386a82fc9686a45c53f776f83fde6edfdd8e0318763ba93013200253305eb0a2f1a583.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
