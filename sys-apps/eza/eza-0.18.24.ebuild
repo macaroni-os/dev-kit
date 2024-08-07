@@ -7,7 +7,7 @@ inherit bash-completion-r1 cargo
 DESCRIPTION="A modern alternative to ls"
 HOMEPAGE="https://eza.rocks https://github.com/eza-community/eza"
 SRC_URI="https://github.com/eza-community/eza/tarball/87bc3323343e2efd3e35d784bbde213aa832eee6 -> eza-0.18.24-87bc332.tar.gz
-https://distfiles.macaronios.org/4e/7a/d6/4e7ad62670e3b93a7dd0fef6ba75976f1c87f0ae3784c6ff8f7fbbce9757fdcf0675cce2f0ff55a9c393b6869835ba3eddacc19d4a9511da1c829c6776d88818 -> eza-0.18.24-funtoo-crates-bundle-9deda86bda2e8b370bd24845d1a61ac828cd300da83eb6008af40cde26185e45af10719bce68c897e383284bffde84fd1310fc2205fe6e869f7b42b1e560efc3.tar.gz"
+https://distfiles.macaronios.org/a3/8f/83/a38f8376dbf2c2a6b702376f2244462519c96d6947ef7bd8f760a26f02ecd130880aed8c9d83bcb480ca7f8f928e3ed59513233fb2d30130ea5de59afc1308aa -> eza-0.18.24-funtoo-crates-bundle-9deda86bda2e8b370bd24845d1a61ac828cd300da83eb6008af40cde26185e45af10719bce68c897e383284bffde84fd1310fc2205fe6e869f7b42b1e560efc3.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"

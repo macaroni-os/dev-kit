@@ -580,7 +580,7 @@ go-module_set_globals
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
 SRC_URI="https://github.com/cli/cli/tarball/89cbcfe7eb186ff4edbe10792d17bdc55b04f297 -> cli-2.54.0-89cbcfe.tar.gz
-https://distfiles.macaronios.org/44/1f/64/441f640bfd43c327acfab266e0b997d737a5d0441907d73772216fb1ced8e56f0f31c46f0892d78d865e30e4c8b97efddf7541e4094370cfce0fbc0c51542d4e -> github-cli-2.54.0-funtoo-go-bundle-01b77b32616f1df4061cf1da72974e6fb1bd38ac9505aa80ecc0de9e2cf56d70dead7e39d451c750b841239dd4b8c78c0c3a810106b492b485adfdd3ca7208da.tar.gz"
+https://distfiles.macaronios.org/de/f5/ea/def5eaa41c172733c310501fe70658de5b7c8ec39fd92e2ecbf05750b316d5774e590846178a2d5f29bc8fe2a35f1ca38c80d6b494ace7a05f9b273f1a3e9047 -> github-cli-2.54.0-funtoo-go-bundle-01b77b32616f1df4061cf1da72974e6fb1bd38ac9505aa80ecc0de9e2cf56d70dead7e39d451c750b841239dd4b8c78c0c3a810106b492b485adfdd3ca7208da.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"

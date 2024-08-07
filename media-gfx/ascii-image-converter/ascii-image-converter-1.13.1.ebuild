@@ -362,7 +362,7 @@ go-module_set_globals
 DESCRIPTION="A cross-platform command-line tool to convert images into ascii art and print them on the console."
 HOMEPAGE="https://github.com/TheZoraiz/ascii-image-converter"
 SRC_URI="https://github.com/TheZoraiz/ascii-image-converter/tarball/d05a757c5e02ab23e97b6f6fca4e1fbeb10ab559 -> ascii-image-converter-1.13.1-d05a757.tar.gz
-https://distfiles.macaronios.org/cd/24/24/cd242432334b88ada2a012505ff759fb72c33211f03805997b64869afae887ce60a68c68fd899e0c80d16689f5bb8fcda5423c56c072d3a6675b83ff3a520fd1 -> ascii-image-converter-1.13.1-funtoo-go-bundle-fb371af4cd1dfe6dfb35f2fb106b8e1bd5914dbdb5b0bef2ab1df3cb6bd0126d586af6a3ca31d1d258a255d279acd346532a162de2062f0ebc0c64e402f296ae.tar.gz"
+https://distfiles.macaronios.org/ea/17/6c/ea176cb906a66e77c26318038ebdf0149bc6a7157a6ff1bd3555f90af721c97aefa698621c4eefb4fcaeadb28d90cd78a77f37e4069e94f9018ca930f5066f31 -> ascii-image-converter-1.13.1-funtoo-go-bundle-fb371af4cd1dfe6dfb35f2fb106b8e1bd5914dbdb5b0bef2ab1df3cb6bd0126d586af6a3ca31d1d258a255d279acd346532a162de2062f0ebc0c64e402f296ae.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
