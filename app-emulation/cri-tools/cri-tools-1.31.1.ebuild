@@ -6,8 +6,8 @@ inherit bash-completion-r1 go-module
 
 go-module_set_globals
 
-SRC_URI="https://github.com/kubernetes-sigs/cri-tools/tarball/5c35c71f607a9baf63e92109ae95b96d9424ba0d -> cri-tools-1.31.0-5c35c71.tar.gz
-https://distfiles.macaronios.org/e4/e4/29/e4e4298ef4387b02d5964aefca1816af55b0dd551ec3f88cebaba270c04b97a028f35be49adaca3736a1850d5686c7a489a62ba48c7cb382d2feac5ae3e202f1 -> cri-tools-1.31.0-funtoo-go-bundle-142e2eabfa4a58ee3cda08136ada1ae200b8789d9fe7bb6a42792eba066c3c1e6dbce92ed728e3740d8f07b97e57fa0726b15f346b948ec35a9c7d5d7a87a36f.tar.gz"
+SRC_URI="https://github.com/kubernetes-sigs/cri-tools/tarball/ea669ca726b21585ee9c94276391eea5b486da46 -> cri-tools-1.31.1-ea669ca.tar.gz
+https://distfiles.macaronios.org/f2/0e/b1/f20eb1d669f5d6b55d7f0790fa91552a52b6e260cda565ef9b52011153e94c24a87521f18d6f1cb39bf8aef95b9845f30c62e435ccd7895c33431eca7d51ad48 -> cri-tools-1.31.1-funtoo-go-bundle-142e2eabfa4a58ee3cda08136ada1ae200b8789d9fe7bb6a42792eba066c3c1e6dbce92ed728e3740d8f07b97e57fa0726b15f346b948ec35a9c7d5d7a87a36f.tar.gz"
 
 DESCRIPTION="CLI and validation tools for Kubelet Container Runtime (CRI)"
 HOMEPAGE="https://github.com/kubernetes-sigs/cri-tools"
