@@ -681,7 +681,7 @@ EGO_SUM=(
 go-module_set_globals
 
 SRC_URI="https://github.com/jesseduffield/lazygit/tarball/71ad3fac63a3ef3326021837b49e9497d332818b -> lazygit-0.43.1-71ad3fa.tar.gz
-https://distfiles.macaronios.org/a0/dd/06/a0dd06f1d849b4239ad9abad5b896c5fc2bb2893d92c942c9d22c20bc635e42d4138ec5ade0878d399740617bf203f00a8c72dcfe54165926729ba32e7f517dd -> lazygit-0.43.1-funtoo-go-bundle-0fa2d86a471d57c3569839a3aa205d5d3364cdbdf03437329e484e4a01130d37871897c36aa088537843c15285b4d52e769494e27dc201c37fef6579b4c56308.tar.gz"
+https://distfiles.macaronios.org/3b/91/a4/3b91a4a3a8214cea381633da15a1ff9ab5344283895bcefe9ebc134c40f2e6523059d6159d310e2c00ed7e566a87a0713ead36cccaaf8cce670c6b0291293402 -> lazygit-0.43.1-funtoo-go-bundle-0fa2d86a471d57c3569839a3aa205d5d3364cdbdf03437329e484e4a01130d37871897c36aa088537843c15285b4d52e769494e27dc201c37fef6579b4c56308.tar.gz"
 
 DESCRIPTION="A simple terminal UI for git commands"
 HOMEPAGE="http://github.com/jesseduffield/lazygit"

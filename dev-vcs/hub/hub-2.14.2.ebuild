@@ -49,7 +49,7 @@ go-module_set_globals
 DESCRIPTION="Command-line wrapper for git that makes you better at GitHub"
 HOMEPAGE="https://github.com/github/hub"
 SRC_URI="https://github.com/github/hub/tarball/606a5de81b31ade21631e90fb42082ad19b64aac -> hub-2.14.2-606a5de.tar.gz
-https://distfiles.macaronios.org/0e/1e/b4/0e1eb416d69f67369a052d7a55284f63ea66cb0539fed324c0a713c36555686153064226d020a51a10d71dee734baa2fd0455e0c577bee9c2096c2e003929704 -> hub-2.14.2-funtoo-go-bundle-63a3df6b855a85b08d3eecd7d0d902eb3a13157f92811dbcaf0ad4cf65668a3aea34352cea6eb4cdc3bc3a23b7ce4a63bc6548d9f7ebb8586e7698f810da988f.tar.gz"
+https://distfiles.macaronios.org/8b/7e/ee/8b7eee92c95c8f63e92588f16f89cd12c90b32e2c89252d29561913126e155b9b9039fc2a8455e96b700977d8372fea0c8f987fa917c064b520e15058a4086b7 -> hub-2.14.2-funtoo-go-bundle-63a3df6b855a85b08d3eecd7d0d902eb3a13157f92811dbcaf0ad4cf65668a3aea34352cea6eb4cdc3bc3a23b7ce4a63bc6548d9f7ebb8586e7698f810da988f.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
