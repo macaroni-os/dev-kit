@@ -1,4 +1,3 @@
-# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -8,8 +7,8 @@ inherit eutils
 DESCRIPTION="Pebble SDK"
 HOMEPAGE="https://developer.pebble.com/sdk/"
 SRC_URI="
-	amd64? ( https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux64.tar.bz2 )
-	x86? ( https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux32.tar.bz2 )
+	amd64? ( https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux64.tar.bz2 )
+	x86? ( https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/${P}-linux32.tar.bz2 )
 "
 
 LICENSE=""
@@ -71,7 +70,8 @@ src_install() {
 	fperms 755 "${dir}/bin/pebble" "${dir}/bin/qemu-pebble"
 
 	into "/opt/"
-	dobin "${dir}/bin/pebble"
+	#dobin "${dir}/bin/pebble"
+	dosym  "${dir}/bin/pebble" /opt/bin/pebble || die
 }
 
 pkg_postinst() {

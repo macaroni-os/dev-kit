@@ -1,0 +1,10 @@
+cbindgen:
+  generator: github-1
+  packages:
+    - cbindgen:
+        version: 0.26.0
+        github:
+          user: mozilla
+          query: releases
+        extensions:
+          - rust
