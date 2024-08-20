@@ -119,8 +119,8 @@ EGO_SUM=(
 	"github.com/cpuguy83/go-md2man/v2 v2.0.4"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
-	"github.com/creack/pty v1.1.21"
-	"github.com/creack/pty v1.1.21/go.mod"
+	"github.com/creack/pty v1.1.23"
+	"github.com/creack/pty v1.1.23/go.mod"
 	"github.com/cyberphone/json-canonicalization v0.0.0-20220623050100-57a0ce2678a7"
 	"github.com/cyberphone/json-canonicalization v0.0.0-20220623050100-57a0ce2678a7/go.mod"
 	"github.com/danieljoos/wincred v1.2.1"
@@ -138,12 +138,10 @@ EGO_SUM=(
 	"github.com/distribution/reference v0.5.0/go.mod"
 	"github.com/dlclark/regexp2 v1.4.0"
 	"github.com/dlclark/regexp2 v1.4.0/go.mod"
-	"github.com/docker/cli v24.0.0+incompatible"
-	"github.com/docker/cli v24.0.0+incompatible/go.mod"
+	"github.com/docker/cli v27.1.1+incompatible"
+	"github.com/docker/cli v27.1.1+incompatible/go.mod"
 	"github.com/docker/distribution v2.8.2+incompatible"
 	"github.com/docker/distribution v2.8.2+incompatible/go.mod"
-	"github.com/docker/docker v24.0.9+incompatible"
-	"github.com/docker/docker v24.0.9+incompatible/go.mod"
 	"github.com/docker/docker-credential-helpers v0.7.0"
 	"github.com/docker/docker-credential-helpers v0.7.0/go.mod"
 	"github.com/fatih/color v1.7.0/go.mod"
@@ -208,8 +206,8 @@ EGO_SUM=(
 	"github.com/google/certificate-transparency-go v1.2.1/go.mod"
 	"github.com/google/go-cmp v0.6.0"
 	"github.com/google/go-cmp v0.6.0/go.mod"
-	"github.com/google/go-containerregistry v0.20.1"
-	"github.com/google/go-containerregistry v0.20.1/go.mod"
+	"github.com/google/go-containerregistry v0.20.2"
+	"github.com/google/go-containerregistry v0.20.2/go.mod"
 	"github.com/google/gofuzz v1.2.0"
 	"github.com/google/gofuzz v1.2.0/go.mod"
 	"github.com/google/s2a-go v0.1.7"
@@ -579,8 +577,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/89cbcfe7eb186ff4edbe10792d17bdc55b04f297 -> cli-2.54.0-89cbcfe.tar.gz
-https://distfiles.macaronios.org/de/f5/ea/def5eaa41c172733c310501fe70658de5b7c8ec39fd92e2ecbf05750b316d5774e590846178a2d5f29bc8fe2a35f1ca38c80d6b494ace7a05f9b273f1a3e9047 -> github-cli-2.54.0-funtoo-go-bundle-01b77b32616f1df4061cf1da72974e6fb1bd38ac9505aa80ecc0de9e2cf56d70dead7e39d451c750b841239dd4b8c78c0c3a810106b492b485adfdd3ca7208da.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/95a2f95f75f4b143699d87294788210ffb558248 -> cli-2.55.0-95a2f95.tar.gz
+https://distfiles.macaronios.org/08/35/a0/0835a0bc1bbb149dca91a715d7b63b7b4ba9c6f68ed81efe68a5d51bfd5dfad984293efdb9710072c30b7c0734f944d8239e8754478c29a8ef4385d93360bf20 -> github-cli-2.55.0-funtoo-go-bundle-15aedf38cc7fbf71a5ca1ac45890872813b60b0873e8afeced852ef63db361bd2d20a6066eb8c5119e1df7852c2102c9cdb961ff6af8b7ba3f8b8b3ed3015a79.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -592,7 +590,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.54.0"
+	export GH_VERSION="v2.55.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
