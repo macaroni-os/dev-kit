@@ -6,8 +6,8 @@ inherit cargo
 
 DESCRIPTION="A simple, fast and user-friendly alternative to 'find'"
 HOMEPAGE="https://github.com/sharkdp/fd"
-SRC_URI="https://github.com/sharkdp/fd/tarball/289a68bac3938d56b176d5b15fab312fd538e949 -> fd-10.1.0-289a68b.tar.gz
-https://distfiles.macaronios.org/ab/29/67/ab2967f5d6b4e40aa4fa1e2451df0e82a070f0385a684346293d283f431cf0db35eefa897185d63d9461907dcefedae0af81d718e184dee63d51c19bebc2f1f3 -> fd-10.1.0-funtoo-crates-bundle-477f541bd9f5e5c33850ac474d6d742ae4d0d7d2b9b8d8d9b61dbd36f11806bfda0c042338391625155c916df5c2d5c9f3b152335b9d784f373efd0c5414f0e8.tar.gz"
+SRC_URI="https://github.com/sharkdp/fd/tarball/b19136871310b01500b4f09eadd7387b8476be47 -> fd-10.2.0-b191368.tar.gz
+https://distfiles.macaronios.org/e6/a2/a5/e6a2a55c97a1454cd72828446ebb783166cb22c9dc428ade4050cbe2730ed70199750778d697c4f2dae0c60a175bf704a1071a6e469b04aac58e2706d4c09962 -> fd-10.2.0-funtoo-crates-bundle-72b4439aaeab4af7c3f85e36a9e59fa07a0f8c6d924575a51537fc6f3b7898abb48824aeca7591fd7d0174677547853d90d9db5b41c30c693e861bd230e167a7.tar.gz"
 
 LICENSE="Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB"
 SLOT="0"
