@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="C++ functions matching the interface and behavior of python string methods"
 HOMEPAGE="https://github.com/imageworks/pystring"
-SRC_URI="https://github.com/imageworks/pystring/archive/76a2024e132bcc83bec1ecfebeacd5d20d490bfe.tar.gz -> pystring-1.1.4_p20230723.tar.gz"
+SRC_URI="https://github.com/imageworks/pystring/archive/c5ca4f569d7d99ed42dfc54130f9cabd183ec657.tar.gz -> pystring-1.1.4_p20240818.tar.gz"
 
 BDEPEND="
 	virtual/libc
