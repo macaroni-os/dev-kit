@@ -6,12 +6,12 @@ inherit autotools
 
 DESCRIPTION="A small C library for x86 (and x86_64) CPU detection and feature extraction"
 HOMEPAGE="http://libcpuid.sourceforge.net/"
-SRC_URI="https://github.com/anrieff/libcpuid/tarball/a578c8d993bb27ecf413ac8ff6b93845fc2fe1b3 -> libcpuid-0.6.5-a578c8d.tar.gz"
+SRC_URI="https://github.com/anrieff/libcpuid/tarball/9574313a76980eecb9ce85221efa244deca71501 -> libcpuid-0.7.0-9574313.tar.gz"
 LICENSE="BSD-2"
-SLOT="0/16"
+SLOT="0/17"
 KEYWORDS="*"
 IUSE="static-libs"
-S="${WORKDIR}/anrieff-libcpuid-a578c8d"
+S="${WORKDIR}/anrieff-libcpuid-9574313"
 
 src_prepare() {
 	default
