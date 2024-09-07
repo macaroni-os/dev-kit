@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-lang/go
+DESCRIPTION=Macaroni OS - M.A.R.K. Development Kit
+EAPI=7
+HOMEPAGE=https://github.com/macaroni-os/mark-devkit
+KEYWORDS=*
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://github.com/macaroni-os/mark-devkit/tarball/20b96253bfcf8a5d71169ab5bf6147dfad574006 -> mark-devkit-0.1.0-20b9625.tar.gz
+_md5_=812c79e12a2609a171c2eeb2594dc958
