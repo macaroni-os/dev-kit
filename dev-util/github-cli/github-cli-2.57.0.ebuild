@@ -102,8 +102,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.0.0/go.mod"
 	"github.com/cli/browser v1.3.0"
 	"github.com/cli/browser v1.3.0/go.mod"
-	"github.com/cli/go-gh/v2 v2.9.0"
-	"github.com/cli/go-gh/v2 v2.9.0/go.mod"
+	"github.com/cli/go-gh/v2 v2.10.0"
+	"github.com/cli/go-gh/v2 v2.10.0/go.mod"
 	"github.com/cli/oauth v1.0.1"
 	"github.com/cli/oauth v1.0.1/go.mod"
 	"github.com/cli/safeexec v1.0.0/go.mod"
@@ -402,8 +402,8 @@ EGO_SUM=(
 	"github.com/sigstore/rekor v1.3.6/go.mod"
 	"github.com/sigstore/sigstore v1.8.9"
 	"github.com/sigstore/sigstore v1.8.9/go.mod"
-	"github.com/sigstore/sigstore-go v0.6.1"
-	"github.com/sigstore/sigstore-go v0.6.1/go.mod"
+	"github.com/sigstore/sigstore-go v0.6.2"
+	"github.com/sigstore/sigstore-go v0.6.2/go.mod"
 	"github.com/sigstore/sigstore/pkg/signature/kms/aws v1.8.3"
 	"github.com/sigstore/sigstore/pkg/signature/kms/aws v1.8.3/go.mod"
 	"github.com/sigstore/sigstore/pkg/signature/kms/azure v1.8.3"
@@ -492,8 +492,8 @@ EGO_SUM=(
 	"go.uber.org/zap v1.27.0/go.mod"
 	"golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod"
 	"golang.org/x/crypto v0.0.0-20210921155107-089bfa567519/go.mod"
-	"golang.org/x/crypto v0.26.0"
-	"golang.org/x/crypto v0.26.0/go.mod"
+	"golang.org/x/crypto v0.27.0"
+	"golang.org/x/crypto v0.27.0/go.mod"
 	"golang.org/x/exp v0.0.0-20240112132812-db7319d0e0e3"
 	"golang.org/x/exp v0.0.0-20240112132812-db7319d0e0e3/go.mod"
 	"golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4/go.mod"
@@ -521,19 +521,19 @@ EGO_SUM=(
 	"golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod"
 	"golang.org/x/sys v0.0.0-20220906165534-d0df966e6959/go.mod"
 	"golang.org/x/sys v0.6.0/go.mod"
-	"golang.org/x/sys v0.23.0"
-	"golang.org/x/sys v0.23.0/go.mod"
+	"golang.org/x/sys v0.25.0"
+	"golang.org/x/sys v0.25.0/go.mod"
 	"golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1/go.mod"
 	"golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod"
-	"golang.org/x/term v0.23.0"
-	"golang.org/x/term v0.23.0/go.mod"
+	"golang.org/x/term v0.24.0"
+	"golang.org/x/term v0.24.0/go.mod"
 	"golang.org/x/text v0.3.0/go.mod"
 	"golang.org/x/text v0.3.3/go.mod"
 	"golang.org/x/text v0.3.7/go.mod"
 	"golang.org/x/text v0.4.0/go.mod"
 	"golang.org/x/text v0.5.0/go.mod"
-	"golang.org/x/text v0.17.0"
-	"golang.org/x/text v0.17.0/go.mod"
+	"golang.org/x/text v0.18.0"
+	"golang.org/x/text v0.18.0/go.mod"
 	"golang.org/x/time v0.5.0"
 	"golang.org/x/time v0.5.0/go.mod"
 	"golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod"
@@ -579,8 +579,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/a3f9d85fc3d474ee0b62535508a71fc723469481 -> cli-2.56.0-a3f9d85.tar.gz
-https://distfiles.macaronios.org/88/dc/31/88dc315d4f339a800ae2fb61c530ed123d9b2eb2b04621caa870f3c92e874a375ef9079dcfaabedea8a149b9f89bdb546bfb16e415a9737563d196cc10042796 -> github-cli-2.56.0-funtoo-go-bundle-d24a1be1aa58c7bb91cbbc6cd5d99c223dd02294c0215d0cba0dc5267ea980570f1706e932f9f49f262590cb38921385f06ddbfd7765544da00fa9a5cb77b886.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/d108784d7f51381dfa81fe2b9af67ec7b443be92 -> cli-2.57.0-d108784.tar.gz
+https://distfiles.macaronios.org/a5/be/b4/a5beb4a672f15501ddc06a3a6efccae4bba0cab1f15f1d4ba8f69646aa2bd517268aef15f728bbbd48cb7f7e9e57708d687a0eb70df8a5351c709751e80f0bcc -> github-cli-2.57.0-funtoo-go-bundle-18e95a84126d5f77d8f83b98a2c54d61fab72b3e44a8b4d1f7d043831f0bbb9071e9948899664b7c4c3371e5d2572c536146552b3b088fa88a7591d260e6e754.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -592,7 +592,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.56.0"
+	export GH_VERSION="v2.57.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
