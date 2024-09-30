@@ -9,10 +9,10 @@ inherit cmake distutils-r1 toolchain-funcs
 
 DESCRIPTION="disassembly/disassembler framework + bindings"
 HOMEPAGE="http://www.capstone-engine.org/"
-SRC_URI="https://github.com/capstone-engine/capstone/tarball/5cca00533dadfe53181f1de3525f859769f69b65 -> capstone-5.0.3-5cca005.tar.gz"
+SRC_URI="https://github.com/capstone-engine/capstone/tarball/97db712c91e964718f9cc300e81b9cf76b31a22e -> capstone-6.0.0-97db712.tar.gz"
 
 LICENSE="BSD"
-SLOT="0/5"
+SLOT="0/6"
 KEYWORDS="*"
 
 RESTRICT="!test? ( test )"
