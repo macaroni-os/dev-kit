@@ -116,8 +116,9 @@ EGO_SUM=(
 	"github.com/containerd/stargz-snapshotter/estargz v0.14.3"
 	"github.com/containerd/stargz-snapshotter/estargz v0.14.3/go.mod"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod"
-	"github.com/cpuguy83/go-md2man/v2 v2.0.4"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.5"
+	"github.com/cpuguy83/go-md2man/v2 v2.0.5/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
 	"github.com/creack/pty v1.1.23"
 	"github.com/creack/pty v1.1.23/go.mod"
@@ -258,8 +259,8 @@ EGO_SUM=(
 	"github.com/hashicorp/hcl v1.0.0/go.mod"
 	"github.com/hashicorp/vault/api v1.12.2"
 	"github.com/hashicorp/vault/api v1.12.2/go.mod"
-	"github.com/henvic/httpretty v0.1.3"
-	"github.com/henvic/httpretty v0.1.3/go.mod"
+	"github.com/henvic/httpretty v0.1.4"
+	"github.com/henvic/httpretty v0.1.4/go.mod"
 	"github.com/hexops/gotextdiff v1.0.3"
 	"github.com/hexops/gotextdiff v1.0.3/go.mod"
 	"github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec"
@@ -447,8 +448,8 @@ EGO_SUM=(
 	"github.com/subosito/gotenv v1.6.0/go.mod"
 	"github.com/theupdateframework/go-tuf v0.7.0"
 	"github.com/theupdateframework/go-tuf v0.7.0/go.mod"
-	"github.com/theupdateframework/go-tuf/v2 v2.0.0"
-	"github.com/theupdateframework/go-tuf/v2 v2.0.0/go.mod"
+	"github.com/theupdateframework/go-tuf/v2 v2.0.1"
+	"github.com/theupdateframework/go-tuf/v2 v2.0.1/go.mod"
 	"github.com/thlib/go-timezone-local v0.0.0-20210907160436-ef149e42d28e"
 	"github.com/thlib/go-timezone-local v0.0.0-20210907160436-ef149e42d28e/go.mod"
 	"github.com/titanous/rocacheck v0.0.0-20171023193734-afe73141d399"
@@ -579,8 +580,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/d108784d7f51381dfa81fe2b9af67ec7b443be92 -> cli-2.57.0-d108784.tar.gz
-https://distfiles.macaronios.org/a5/be/b4/a5beb4a672f15501ddc06a3a6efccae4bba0cab1f15f1d4ba8f69646aa2bd517268aef15f728bbbd48cb7f7e9e57708d687a0eb70df8a5351c709751e80f0bcc -> github-cli-2.57.0-funtoo-go-bundle-18e95a84126d5f77d8f83b98a2c54d61fab72b3e44a8b4d1f7d043831f0bbb9071e9948899664b7c4c3371e5d2572c536146552b3b088fa88a7591d260e6e754.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/3f3acde3936455127a5d7a8ca04d0ce561e29811 -> cli-2.58.0-3f3acde.tar.gz
+https://distfiles.macaronios.org/ab/2e/68/ab2e68ce6466a8ba9dbcc63371ab8c35f3285643d34ccf52b57035f3c9e1dafa735f7724c291abe4b25fe36e3970656b735ae5298b71af10da0d8f83e618c712 -> github-cli-2.58.0-funtoo-go-bundle-f125e0f6243c11b87e4d836ec4a37e38b788c30f3e4f2a6b671e602041b5912e1205c949e7ed7e0a94e89c52eda3e1150c0dd25fcaa16856ac46bd586a67bb8c.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -592,7 +593,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.57.0"
+	export GH_VERSION="v2.58.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
