@@ -1,8 +1,7 @@
-# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit autotools eutils flag-o-matic multilib-minimal toolchain-funcs
+EAPI=7
+inherit autotools eutils flag-o-matic multilib-minimal toolchain-funcs ltprune
 
 MY_PN="CUnit"
 MY_PV="${PV/_p*}-3"
@@ -14,7 +13,7 @@ HOMEPAGE="http://cunit.sourceforge.net"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~riscv s390 ~sh sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="*"
 IUSE="ncurses static-libs"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.9-r3:0=[${MULTILIB_USEDEP}] )"
@@ -23,6 +22,11 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS NEWS README ChangeLog )
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-2.1_p3-ncurses-format-security.patch
+	"${FILESDIR}"/${PN}-ncurses.patch
+)
 
 src_prepare() {
 	default
