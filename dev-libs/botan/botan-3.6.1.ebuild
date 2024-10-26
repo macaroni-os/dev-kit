@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3+ )
 inherit python-r1 toolchain-funcs
 
 DESCRIPTION="C++ crypto library"
-SRC_URI="https://github.com/randombit/botan/tarball/76a8996c624624f5bb68fe224554cb58ad860371 -> botan-3.6.0-76a8996.tar.gz"
+SRC_URI="https://github.com/randombit/botan/tarball/d1ad41eef0d7039f79ac89d180f0d697936b09f1 -> botan-3.6.1-d1ad41e.tar.gz"
 
 HOMEPAGE="https://botan.randombit.net/"
 
