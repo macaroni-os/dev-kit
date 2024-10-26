@@ -104,8 +104,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.3.0/go.mod"
 	"github.com/cli/go-gh/v2 v2.11.0"
 	"github.com/cli/go-gh/v2 v2.11.0/go.mod"
-	"github.com/cli/go-internal v0.0.0-20241024130215-fa3c22e38b9b"
-	"github.com/cli/go-internal v0.0.0-20241024130215-fa3c22e38b9b/go.mod"
+	"github.com/cli/go-internal v0.0.0-20241025142207-6c48bcd5ce24"
+	"github.com/cli/go-internal v0.0.0-20241025142207-6c48bcd5ce24/go.mod"
 	"github.com/cli/oauth v1.1.1"
 	"github.com/cli/oauth v1.1.1/go.mod"
 	"github.com/cli/safeexec v1.0.0/go.mod"
@@ -375,6 +375,8 @@ EGO_SUM=(
 	"github.com/rivo/uniseg v0.4.7/go.mod"
 	"github.com/rodaine/table v1.0.1"
 	"github.com/rodaine/table v1.0.1/go.mod"
+	"github.com/rogpeppe/go-internal v1.11.0"
+	"github.com/rogpeppe/go-internal v1.11.0/go.mod"
 	"github.com/russross/blackfriday/v2 v2.1.0"
 	"github.com/russross/blackfriday/v2 v2.1.0/go.mod"
 	"github.com/ryanuber/go-glob v1.0.0"
@@ -580,8 +582,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/44ee17760709bedf1cad7e452e61751489b81a33 -> cli-2.60.0-44ee177.tar.gz
-https://distfiles.macaronios.org/42/87/c0/4287c01f2120cdb134135f9a3ae7171cf9c0b6fa452241553ee61d05dcc20414bfda74f09d9f3e36a75f5aed2a082851a1b4c79f6fbc4910494d0d364888ae0c -> github-cli-2.60.0-funtoo-go-bundle-f5354c64f987234c4f5c132bbae5572eb008f2453b8caa42a7ec803d2a1f881a3524e46b944750651c05f1e6ca38eacef28a9662d015f76519f062b9b3528bf8.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/a381ca5dc43eaba63d2356b1442da119864a17ac -> cli-2.60.1-a381ca5.tar.gz
+https://distfiles.macaronios.org/f3/f4/a6/f3f4a63e79c1241cf1c2c02860e8e35ac5ee7f2dbac9223192e31f216b46e63e204be8a6c56385dd73615b0040e4c36d32bdedfe2828b03064624add2f6f4b7c -> github-cli-2.60.1-funtoo-go-bundle-7434c75ab638805873f632d21895b867761a73d4a30921f3e5989f885cd0b5461be75ce504f781fc8cc902605a74930fc5153d9afbc24e1deca3647496210749.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -593,7 +595,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.60.0"
+	export GH_VERSION="v2.60.1"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
