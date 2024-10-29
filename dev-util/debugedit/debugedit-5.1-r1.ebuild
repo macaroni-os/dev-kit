@@ -7,7 +7,7 @@ inherit autotools
 DESCRIPTION="Create debuginfo and source file distributions"
 HOMEPAGE="https://sourceware.org/debugedit/"
 
-SRC_URI=" https://sourceware.org/ftp/debugedit//5.0/debugedit-5.0.tar.xz -> debugedit-5.0.tar.xz
+SRC_URI=" https://sourceware.org/ftp/debugedit//5.1/debugedit-5.1.tar.xz -> debugedit-5.1.tar.xz
 "
 
 LICENSE="GPL-2+ LGPL-2+"
@@ -24,7 +24,6 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/debugedit-5.0-funtoo-patch-collection.patch
 	"${FILESDIR}"/debugedit-5.0-musl-error.h-fix.patch
 
 )
