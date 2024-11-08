@@ -122,8 +122,8 @@ EGO_SUM=(
 	"github.com/cpuguy83/go-md2man/v2 v2.0.5"
 	"github.com/cpuguy83/go-md2man/v2 v2.0.5/go.mod"
 	"github.com/creack/pty v1.1.17/go.mod"
-	"github.com/creack/pty v1.1.23"
-	"github.com/creack/pty v1.1.23/go.mod"
+	"github.com/creack/pty v1.1.24"
+	"github.com/creack/pty v1.1.24/go.mod"
 	"github.com/cyberphone/json-canonicalization v0.0.0-20220623050100-57a0ce2678a7"
 	"github.com/cyberphone/json-canonicalization v0.0.0-20220623050100-57a0ce2678a7/go.mod"
 	"github.com/danieljoos/wincred v1.2.1"
@@ -582,8 +582,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/a381ca5dc43eaba63d2356b1442da119864a17ac -> cli-2.60.1-a381ca5.tar.gz
-https://distfiles.macaronios.org/f3/f4/a6/f3f4a63e79c1241cf1c2c02860e8e35ac5ee7f2dbac9223192e31f216b46e63e204be8a6c56385dd73615b0040e4c36d32bdedfe2828b03064624add2f6f4b7c -> github-cli-2.60.1-funtoo-go-bundle-7434c75ab638805873f632d21895b867761a73d4a30921f3e5989f885cd0b5461be75ce504f781fc8cc902605a74930fc5153d9afbc24e1deca3647496210749.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/215e4f440f56a0652e5c0f64614b64edcf1da1bc -> cli-2.61.0-215e4f4.tar.gz
+https://distfiles.macaronios.org/09/be/c6/09bec6632a82e8cd27f3d3a676737828b6c3276584273a7d4092fe8a4acc4c364bac8a2d7a2515f2e8e10a0d18a9248f53340b3ae157879802c9872cb10c25b9 -> github-cli-2.61.0-funtoo-go-bundle-473c5ddf1917336bda140a2ad9611b560f6fdc7c4df965f66af0ba8a3941f4e7a6c84bbdb318e742ac047199076611667541f700227f46a6b4fb5eefa647828a.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -595,7 +595,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.60.1"
+	export GH_VERSION="v2.61.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
