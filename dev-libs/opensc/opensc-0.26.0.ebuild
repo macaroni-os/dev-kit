@@ -8,7 +8,7 @@ DESCRIPTION="Libraries and applications to access smartcards"
 HOMEPAGE="https://github.com/OpenSC/OpenSC/wiki"
 KEYWORDS="*"
 
-SRC_URI="https://github.com/OpenSC/OpenSC/releases/download/0.25.1/opensc-0.25.1.tar.gz -> opensc-0.25.1.tar.gz"
+SRC_URI="https://github.com/OpenSC/OpenSC/releases/download/0.26.0/opensc-0.26.0.tar.gz -> opensc-0.26.0.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/11"
