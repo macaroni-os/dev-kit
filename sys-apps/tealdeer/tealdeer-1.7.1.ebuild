@@ -6,8 +6,8 @@ inherit cargo bash-completion-r1
 
 DESCRIPTION="A very fast implementation of tldr in Rust."
 HOMEPAGE="https://github.com/dbrgn/tealdeer https://dbrgn.github.io/tealdeer/"
-SRC_URI="https://github.com/dbrgn/tealdeer/tarball/6b2f31ce347d9be2f17286d60d7424fcfbbcae32 -> tealdeer-1.7.0-6b2f31c.tar.gz
-https://distfiles.macaronios.org/c6/be/5c/c6be5c6e098df5cd93b4c6fdc45872937853586dc363efa748c4ced11bb70ae3d37d754b7bcd50c40e553ceb18217014f090112d56968ff77908102fb410b5f6 -> tealdeer-1.7.0-funtoo-crates-bundle-dcab52f1055a4bd8acf8b5410db9c1e3b2ec9c5c2eff98220446f57aeb3573b18dc90eedb23a162c1877752ca4bf653ad109217884015b25415f87c4306ee747.tar.gz"
+SRC_URI="https://github.com/dbrgn/tealdeer/tarball/9b2122ed28d220593e510c362c10102d6bcf5722 -> tealdeer-1.7.1-9b2122e.tar.gz
+https://distfiles.macaronios.org/21/10/7b/21107b08d0010ab66ea46fed61a569c87a834b889bdf29dcfc8fa0ba93dbc9bd239940385c8a450c654a9f78ec2777aae7949aface90d02a66222fd2ab761529 -> tealdeer-1.7.1-funtoo-crates-bundle-43da2286fdbec9cb8cf32eb44e0eeedc464654c63f4abcb17df466afa311bda447ff2cc1805347988b150bc8460c16a86f4cc6f603d9d10dcadd4bdb0f3ed128.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
