@@ -102,8 +102,8 @@ EGO_SUM=(
 	"github.com/cli/browser v1.0.0/go.mod"
 	"github.com/cli/browser v1.3.0"
 	"github.com/cli/browser v1.3.0/go.mod"
-	"github.com/cli/go-gh/v2 v2.11.0"
-	"github.com/cli/go-gh/v2 v2.11.0/go.mod"
+	"github.com/cli/go-gh/v2 v2.11.1"
+	"github.com/cli/go-gh/v2 v2.11.1/go.mod"
 	"github.com/cli/go-internal v0.0.0-20241025142207-6c48bcd5ce24"
 	"github.com/cli/go-internal v0.0.0-20241025142207-6c48bcd5ce24/go.mod"
 	"github.com/cli/oauth v1.1.1"
@@ -582,8 +582,8 @@ go-module_set_globals
 
 DESCRIPTION="GitHub CLI"
 HOMEPAGE="https://github.com/cli/cli"
-SRC_URI="https://github.com/cli/cli/tarball/cd3f2ad064fbeca17d330e321fef0591eaa0fea5 -> cli-2.62.0-cd3f2ad.tar.gz
-https://distfiles.macaronios.org/ca/d3/a2/cad3a2b357bc824171a3fd7c08f2aecbc38a844bc1ec3e5c0217bac48cb78f91ef5de4e38d7edef59b2a18f913b2eb2f53ab10e52c0f42a4c1639a1fe315e02e -> github-cli-2.62.0-funtoo-go-bundle-473c5ddf1917336bda140a2ad9611b560f6fdc7c4df965f66af0ba8a3941f4e7a6c84bbdb318e742ac047199076611667541f700227f46a6b4fb5eefa647828a.tar.gz"
+SRC_URI="https://github.com/cli/cli/tarball/1fe14c956d057e6abda50a76d8820a6e668ba70a -> cli-2.63.0-1fe14c9.tar.gz
+https://distfiles.macaronios.org/71/c7/ab/71c7ab5cd0355aae596dc9c9c12b09d08eebff6a88176efbd8cc577d8b7a96f0fbd2590af244fffa42535f8ff352f88d2b6a15187715add97ab098bda9112081 -> github-cli-2.63.0-funtoo-go-bundle-688cb30f995b6db79b0710b8088419456837db93bb0e6755d9fecaa4765aac672c28686ff360dda26de4c8b60565094d37a11d2a070cb3b8f121e167360b64df.tar.gz"
 KEYWORDS="*"
 LICENSE="MIT Apache-2.0 BSD BSD-2 MPL-2.0"
 SLOT="0"
@@ -595,7 +595,7 @@ post_src_unpack() {
 }
 
 src_compile() {
-	export GH_VERSION="v2.62.0"
+	export GH_VERSION="v2.63.0"
 	# Go LDFLAGS are not the same as GCC/Binutils LDFLAGS
 	unset LDFLAGS
 	# Once we set up cross compiling, this line will need to be adjusted
