@@ -6,7 +6,7 @@ inherit cmake flag-o-matic
 
 DESCRIPTION="plain-C Protocol Buffers for embedded/memory-constrained systems"
 HOMEPAGE="https://jpa.kapsi.fi/nanopb/ https://github.com/nanopb/nanopb"
-SRC_URI="https://github.com/nanopb/nanopb/tarball/98bf4db69897b53434f3d0ba72e0a3ab1a902824 -> nanopb-0.4.9-98bf4db.tar.gz"
+SRC_URI="https://github.com/nanopb/nanopb/tarball/cad3c18ef15a663e30e3e43e3a752b66378adec1 -> nanopb-0.4.9.1-cad3c18.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
