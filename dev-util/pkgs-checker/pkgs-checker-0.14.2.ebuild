@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="Macaroni OS Artefacts Checker"
 HOMEPAGE="https://github.com/geaaru/pkgs-checker"
-SRC_URI="https://github.com/geaaru/pkgs-checker/tarball/09c3820e27f942384876dcfd2ee6ab7403b8e8a1 -> pkgs-checker-0.14.1-09c3820.tar.gz"
+SRC_URI="https://github.com/geaaru/pkgs-checker/tarball/e0a3c90a07b412c85af3bc4cbd79bc185d52a382 -> pkgs-checker-0.14.2-e0a3c90.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +19,7 @@ post_src_unpack() {
 src_compile() {
 	anise_ldflags=(
 		"-X \"github.com/geaaru/pkgs-checker/cmd.BuildTime=$(date -u '+%Y-%m-%d %I:%M:%S %Z')\""
-		"-X github.com/geaaru/pkgs-checker/cmd.BuildCommit=09c3820e27f942384876dcfd2ee6ab7403b8e8a1"
+		"-X github.com/geaaru/pkgs-checker/cmd.BuildCommit=e0a3c90a07b412c85af3bc4cbd79bc185d52a382"
 		"-X github.com/geaaru/pkgs-checker/cmd.BuildGoVersion=$(go env GOVERSION)"
 	)
 
