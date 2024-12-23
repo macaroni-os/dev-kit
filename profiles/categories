@@ -1,7 +1,9 @@
 app-text
+dev-cpp
 dev-libs
 dev-util
 dev-vcs
 sys-apps
 sys-devel
+sys-libs
 virtual
