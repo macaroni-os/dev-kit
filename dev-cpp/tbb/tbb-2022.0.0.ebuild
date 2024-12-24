@@ -6,10 +6,10 @@ inherit cmake
 
 DESCRIPTION="High level abstract threading library"
 HOMEPAGE="https://www.threadingbuildingblocks.org"
-SRC_URI="https://api.github.com/repos/uxlfoundation/oneTBB/tarball/v2022.0.0 -> tbb-2022.0.0.tar.gz"
+SRC_URI="https://github.com/uxlfoundation/oneTBB/tarball/0c0ff192a2304e114bc9e6557582dfba101360ff -> oneTBB-2022.0.0-0c0ff19.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0/${PV}"
+SLOT="0"
 KEYWORDS="*"
 IUSE="hwloc tests valgrind"
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	default
 	rm -rf "${S}"
-	mv "${WORKDIR}"/oneapi-src-oneTBB-* "${S}" || die
+	mv "${WORKDIR}"/uxlfoundation-oneTBB-* "${S}" || die
 }
 
 src_configure() {
