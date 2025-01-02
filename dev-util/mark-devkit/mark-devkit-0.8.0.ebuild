@@ -4,7 +4,7 @@ EAPI=7
 
 DESCRIPTION="Macaroni OS - M.A.R.K. Development Kit"
 HOMEPAGE="https://github.com/macaroni-os/mark-devkit"
-SRC_URI="https://github.com/macaroni-os/mark-devkit/tarball/4026af41983e6e56fd2f546573dcd99790a365c6 -> mark-devkit-0.7.0-4026af4.tar.gz"
+SRC_URI="https://github.com/macaroni-os/mark-devkit/tarball/01c783a8406950d0ddb4be580eb6e581642779b8 -> mark-devkit-0.8.0-01c783a.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +19,7 @@ post_src_unpack() {
 src_compile() {
 	mark_ldflags=(
 		"-X \"github.com/macaroni-os/mark-devkit/pkg/config.BuildTime=$(date -u '+%Y-%m-%d %I:%M:%S %Z')\""
-		"-X github.com/macaroni-os/mark-devkit/pkg/config.BuildCommit=4026af41983e6e56fd2f546573dcd99790a365c6"
+		"-X github.com/macaroni-os/mark-devkit/pkg/config.BuildCommit=01c783a8406950d0ddb4be580eb6e581642779b8"
 		"-X github.com/macaroni-os/mark-devkit/pkg/config.BuildGoVersion=$(go env GOVERSION)"
 	)
 
