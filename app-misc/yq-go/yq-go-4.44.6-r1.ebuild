@@ -101,16 +101,16 @@ KEYWORDS="*"
 S="${WORKDIR}/mikefarah-yq-4839dbb"
 
 DEPEND=""
-RDEPEND=">=dev-vcs/git-1.7.3"
+RDEPEND=""
 BDEPEND=">=dev-lang/go-1.16.14"
 
 src_compile() {
 	# The default yq go binary will conflict with python-modules-kit's app-misc/yq, which also has a yq executable installed to /usr/bin/yq
 	# For now until a decision is made regarding app-misc/yq, yq-go will be used as the binary name to avoid any collisions
-	go build -o bin/yq-go || die "compile failed"
+	go build -o bin/yq4 || die "compile failed"
 }
 
 src_install() {
-	dobin bin/yq-go
+	dobin bin/yq4
 	dodoc README.md
 }
