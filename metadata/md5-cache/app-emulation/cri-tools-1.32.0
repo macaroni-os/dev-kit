@@ -1,0 +1,13 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare unpack
+DEPEND=dev-lang/go
+DESCRIPTION=CLI and validation tools for Kubelet Container Runtime (CRI)
+EAPI=7
+HOMEPAGE=https://github.com/kubernetes-sigs/cri-tools
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD BSD-2 CC-BY-SA-4.0 ISC MIT MPL-2.0
+RESTRICT=strip test
+SLOT=0
+SRC_URI=https://github.com/kubernetes-sigs/cri-tools/tarball/b5cf674bb19f574ee488c991ac813c76c08eedaf -> cri-tools-1.32.0-b5cf674.tar.gz https://distfiles.macaronios.org/26/c3/c6/26c3c601c2b13d8c8954e3546393b53256b459dadbde6a84c39df4680cd75765fdc2be333bc221654d3c0b7664ab0bbcb01fe877999d4dce6213f9036ec19fb7 -> cri-tools-1.32.0-funtoo-go-bundle-9ffb872fa2e3ed538404e1aefde2233a44ae97307dea0cf7a79a999e6b85cfffd4df2e09321c58cbd037142135c9562a0b03d6e54ce089c630b4b0ad631423d9.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	go-module	cb10a443c46556a15ed035d7a99128e8	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=d0036287c4158ae46867796e1c0189c6
