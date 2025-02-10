@@ -313,8 +313,8 @@ EGO_SUM=(
 	"google.golang.org/genproto/googleapis/rpc v0.0.0-20240701130421-f6361c86f094/go.mod"
 	"google.golang.org/grpc v1.66.3"
 	"google.golang.org/grpc v1.66.3/go.mod"
-	"google.golang.org/protobuf v1.36.3"
-	"google.golang.org/protobuf v1.36.3/go.mod"
+	"google.golang.org/protobuf v1.36.4"
+	"google.golang.org/protobuf v1.36.4/go.mod"
 	"gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod"
 	"gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15/go.mod"
 	"gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c"
@@ -335,8 +335,8 @@ go-module_set_globals
 
 DESCRIPTION="Run your GitHub Actions locally"
 HOMEPAGE="https://github.com/nektos/act"
-SRC_URI="https://github.com/nektos/act/tarball/8771e04ded2aee09cea802b6d327adbb8754b487 -> act-0.2.72-8771e04.tar.gz
-https://distfiles.macaronios.org/01/ec/37/01ec37287f871720407ffb88b10b8ee1298e89f53c6d35f5a633c18c36883831d6e18cee4eb512a4be8548a7584ba7121b450b298b20f8238919d36b3d603ca1 -> act-0.2.72-funtoo-go-bundle-564605b5a91e4aee327402bea3df1810aca20ee29c5c468b5e82a31e137e3ac6fa06130886dc4d5977e89525cbd43d6a9f1978ee930a838046296034194140da.tar.gz"
+SRC_URI="https://github.com/nektos/act/tarball/90b4a4c57b9c5c17ea4bb73580af115a77bbf6d1 -> act-0.2.73-90b4a4c.tar.gz
+https://distfiles.macaronios.org/12/b7/0f/12b70f137d3c8e82dcc354560e5f065868a6d73a861a1f79763d0f7945a143bb10d3f597008939a8599c5bb4a69dd47efad4bd9a21a512c6f4104388dc115963 -> act-0.2.73-funtoo-go-bundle-6dcc209fe64baa7ecdc79c3b7dd43d195ff826e1fc5ffa1d80d864e67cbdc15428b12d0b042180dba43eb7a2b0f6e88ee671f0a9237dfd53316abef76c3e8f54.tar.gz"
 
 RDEPEND="
 	app-emulation/docker
