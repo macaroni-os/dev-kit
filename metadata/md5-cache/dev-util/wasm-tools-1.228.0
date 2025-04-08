@@ -1,0 +1,12 @@
+BDEPEND=>=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=CLI and Rust libraries for low-level manipulation of WebAssembly modules
+EAPI=7
+HOMEPAGE=https://github.com/bytecodealliance/wasm-tools
+IUSE=debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+SLOT=0
+SRC_URI=https://github.com/bytecodealliance/wasm-tools/tarball/e66235859a6ec0502bf6f9dcc358953eda4cafcc -> wasm-tools-1.228.0-e662358.tar.gz https://distfiles.macaronios.org/57/e4/8b/57e48bc11fa38ae3b6827a0c9fada45830ce36f6674247327f47d160eb07fa380a56713df3ab06c31306f97cc6e7f3aa8c37e951d4860e561fc33ee4e239779e -> wasm-tools-1.228.0-funtoo-crates-bundle-72fcbaa4b77cad492e08c0a04c6a7112feff0e0ee8136159967badf7696b4c32f636203e546f4087a125cc18fd955133558bf9305bb3c81dad4da6f8ace7b818.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=446ecda9fcd6588fc8ddbbc22e314e2c
