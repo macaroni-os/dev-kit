@@ -1,0 +1,14 @@
+BDEPEND=doc? ( app-text/asciidoctor ) >=dev-lang/go-1.18 >=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare test unpack
+DESCRIPTION=Git extension for versioning large files
+EAPI=7
+HOMEPAGE=https://git-lfs.github.com/
+IUSE=doc test
+KEYWORDS=*
+LICENSE=Apache-2.0 BSD BSD-2 BSD-4 ISC MIT
+RDEPEND=dev-vcs/git
+RESTRICT=strip !test? ( test )
+SLOT=0
+SRC_URI=https://github.com/git-lfs/git-lfs/tarball/fefe2ad989840c70bb9f561447d422f17f6c8d5f -> git-lfs-3.6.1-fefe2ad.tar.gz https://distfiles.macaronios.org/bc/a3/9c/bca39ccf691a31d98f5de7b5ce273a309617868dd63f0db62d15ab12b2bc2926709a469f4667e0091c9ab83f033a231775413ccc2687cfda480df389dc67e189 -> git-lfs-3.6.1-funtoo-go-bundle-4c7c54822c5ad7959b9362d0b714266734c57b7d2fde4d22b3469833a3aa2124710e9f28dbb10adfd43e25c3ca4a33628cbaaa455b98079ecfa3feb2a78f4377.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=f76b5add6e9e093d8c708d1ae16f929f
