@@ -1,0 +1,12 @@
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=A simple terminal UI for git commands
+EAPI=7
+HOMEPAGE=http://github.com/jesseduffield/lazygit
+KEYWORDS=*
+LICENSE=Apache-2.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/jesseduffield/lazygit/tarball/66caa25dcd4c247589e6adc71a6bc088678f3212 -> lazygit-0.50.0-66caa25.tar.gz https://distfiles.macaronios.org/8a/95/b1/8a95b196c08a453d17680dd71a73993a347e4c00ec62079ae725eaa93d7bc74f27679828c58bb3302113c0d9f8fbd71bf690c80b821b2996082b3e106a470e78 -> lazygit-0.50.0-funtoo-go-bundle-609cbb167caad259491801a42000c0033a47904494c62e6ad56414cf3819e18165afb453db5101f0dcbae8cb48d40899d41bae1f812cca406d7133febabcfd5b.tar.gz
+_eclasses_=go-module	cb10a443c46556a15ed035d7a99128e8	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=7176d36c5e60c92a5e38b7cf972ee8b3

@@ -1,0 +1,14 @@
+BDEPEND=|| ( app-text/pandoc-bin app-text/pandoc ) virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DEPEND=git? ( dev-libs/libgit2:= )
+DESCRIPTION=A modern alternative to ls
+EAPI=7
+HOMEPAGE=https://eza.rocks https://github.com/eza-community/eza
+IUSE=+git debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+RDEPEND=git? ( dev-libs/libgit2:= )
+SLOT=0
+SRC_URI=https://github.com/eza-community/eza/tarball/465d6abbf9b541e1703a6fa55c11fad134f01527 -> eza-0.21.3-465d6ab.tar.gz https://distfiles.macaronios.org/d8/ae/0d/d8ae0dd386c3bfd5710e1c2a833a80c3e8ad31cf8ef9b8082f27ae165f0cff144941015033993c672b5a7181f50e7c9a57bdef1a2a8ad68b21c68163f30f6abf -> eza-0.21.3-funtoo-crates-bundle-ab35648a45e332dd40e0739b95e9c5a3b4d74d8f39aa137dce27d33d49a17c0bfd32b7a225457860fe4fd1ce2b11fa389db9b866d0f7e084c73b4ced3e524833.tar.gz
+_eclasses_=bash-completion-r1	47a7402d95930413ce25ba8d857339bb	cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=a04e907ccbf0a993364c739456d18618
