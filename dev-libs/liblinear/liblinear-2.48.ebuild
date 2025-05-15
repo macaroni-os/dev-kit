@@ -10,6 +10,14 @@ SRC_URI="https://www.csie.ntu.edu.tw/~cjlin/liblinear/./liblinear-2.48.tar.gz ->
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="*"
+IUSE="blas"
+RDEPEND="blas? ( virtual/blas )
+	
+"
+DEPEND="${RDEPEND}
+	blas? ( virtual/pkgconfig )
+	
+"
 src_prepare() {
 	default
 	sed -i \
