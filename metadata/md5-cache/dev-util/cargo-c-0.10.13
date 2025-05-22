@@ -1,0 +1,13 @@
+BDEPEND=virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=build and install C-compatible libraries
+EAPI=7
+HOMEPAGE=https://github.com/lu-zero/cargo-c
+IUSE=debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+RDEPEND=sys-libs/zlib dev-libs/openssl:0= dev-vcs/git net-misc/curl[ssl]
+SLOT=0
+SRC_URI=https://github.com/lu-zero/cargo-c/tarball/13cdea00f92fbd69ebf6f342aac5622700c9e691 -> cargo-c-0.10.13-13cdea0.tar.gz https://distfiles.macaronios.org/a0/c2/cc/a0c2cc3a5fc4aaf9a40741a02e1946f64fe8d82d0b5ad77eae1242fff53c97ff8b0c64fd27a7dea32673efd3213cc9a8bb7ce2e784f0119e55ba2974fa850582 -> cargo-c-0.10.13-funtoo-crates-bundle-1b332ebc94fa2efc3dde68c698919d429e252f5aeca53f1a3cc246df1c137c652525395e74f663dc2ec1c0506feb97d27e74d3cd202c46a5c78f19f95e25b330.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=8828e4f551549f3beb9e57b8c1838a80

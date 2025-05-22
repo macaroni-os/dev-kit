@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-lang/go
+DESCRIPTION=Macaroni OS Artefacts Checker
+EAPI=7
+HOMEPAGE=https://github.com/geaaru/pkgs-checker
+KEYWORDS=*
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://github.com/geaaru/pkgs-checker/tarball/5a4961c2a4a33066d8945867b4e6ca0e04632cf6 -> pkgs-checker-0.16.0-5a4961c.tar.gz
+_md5_=68174c66199dca90a6a308150b80485d

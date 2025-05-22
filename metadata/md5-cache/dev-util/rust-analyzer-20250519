@@ -1,0 +1,12 @@
+BDEPEND=virtual/rust >=virtual/rust-1.37.0
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=A Rust compiler front-end for IDEs
+EAPI=7
+HOMEPAGE=https://rust-analyzer.github.io/ https://github.com/rust-lang/rust-analyzer
+IUSE=debug
+KEYWORDS=*
+LICENSE=Apache-2.0 Boost-1.0 BSD BSD-2 CC0-1.0 ISC LGPL-3+ MIT Apache-2.0 Unlicense ZLIB
+SLOT=0
+SRC_URI=https://github.com/rust-lang/rust-analyzer/tarball/e464ff8c755c6e12540a45b83274ec4de4829191 -> rust-analyzer-20250519-e464ff8.tar.gz https://distfiles.macaronios.org/3e/86/d9/3e86d9ef0f5f5da987d5c417c150ac0bf208338bfa1949847fc9bb0d77d35618c7db4abe325233bef17f5e641f2db767ecea23b42c6c06c4aef37f1e5283ba90 -> rust-analyzer-20250519-funtoo-crates-bundle-558ca4b79f1b6e803dad75a7fca57e8403d37cdfd9874d052f4149b5a24ae7abf0b0201d10c258b9a41a9d1bde6e793b1b9346fb443f59422a649d276adc9220.tar.gz
+_eclasses_=cargo	a3e90d3e6ca8541d967cff212149cffc	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=f3bb3fdecaafe88d5ea695daeead65c9
