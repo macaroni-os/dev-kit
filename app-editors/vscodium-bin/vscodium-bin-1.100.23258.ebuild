@@ -6,7 +6,7 @@ inherit desktop eutils pax-utils xdg
 
 MY_INSTALL_DIR="/opt/${PN}"
 MY_EXEC="codium"
-DESCRIPTION="Community-driven, freely-licensed binary distribution of Microsoft’s editor VSCode"
+DESCRIPTION="Community-driven, freely-licensed editor VSCode"
 HOMEPAGE="https://vscodium.com/"
 SRC_URI="https://github.com/VSCodium/vscodium/releases/download/1.100.23258/VSCodium-linux-x64-1.100.23258.tar.gz -> VSCodium-linux-x64-1.100.23258.tar.gz"
 RESTRICT="strip"
@@ -48,13 +48,13 @@ src_install() {
 	fperms +x "${MY_INSTALL_DIR}/libffmpeg.so"
 
 	#fix Spawn EACESS bug #25848
-	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules.asar.unpacked/@vscode/ripgrep/bin/rg"
+	fperms +x "${MY_INSTALL_DIR}/resources/app/node_modules/@vscode/ripgrep/bin/rg"
 	insinto "/usr/share/licenses/${PN}"
 	newins "${S}/resources/app/LICENSE.txt" "LICENSE.txt"
 }
 
 pkg_postinst() {
-        xdg_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 	elog "You may install some additional utils, so check them in:"
 	elog "https://code.visualstudio.com/Docs/setup#_additional-tools"
@@ -62,5 +62,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	xdg_desktop_database_update
-        xdg_icon_cache_update
+	xdg_icon_cache_update
 }
