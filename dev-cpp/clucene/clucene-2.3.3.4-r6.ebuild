@@ -43,6 +43,11 @@ src_prepare() {
 		-e '/ADD_SUBDIRECTORY (src\/ext)/d' \
 		CMakeLists.txt || die
 	rm -rf src/ext || die
+
+	# macaroni-os/mark-issues#419
+	sed -i \
+		-e "s|^CL_NS_USE(util)|#include <ctime>\nCL_NS_USE(util)|g" \
+		src/core/CLucene/document/DateTools.cpp || die
 }
 
 src_configure() {
