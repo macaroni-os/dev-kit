@@ -36,7 +36,7 @@ src_install() {
 
 	mkdir -p "${ED}"/usr/share/applications
 	insinto /usr/share/applications
-	doins "${REPODIR}/dev-util/jetbrains/files/${PN}.desktop"
+	doins "${FILESDIR}/${PN}.desktop"
 }
 
 pkg_postinst() {
