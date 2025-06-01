@@ -59,7 +59,7 @@ BDEPEND="sys-apps/groff"
 RDEPEND=">=dev-vcs/git-1.7.3"
 
 post_src_unpack() {
-	mv "${WORKDIR}"/github-hub-* "${S}" || die
+	mv "${WORKDIR}"/mislav-hub-* "${S}" || die
 }
 
 src_compile() {
