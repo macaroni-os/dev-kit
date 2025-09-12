@@ -140,6 +140,8 @@ grub_configure() {
 	   # Let configure detect this where supported
 	  $(usex efiemu '' '--disable-efiemu')
 	)
+	local UNIFONT="unifont-15.0.06"
+	local DEJAVU="dejavu-sans-ttf-2.37"
 	 if use fonts; then
 	  ln -rs "${WORKDIR}/${UNIFONT}.pcf" unifont.pcf || die
 	fi
