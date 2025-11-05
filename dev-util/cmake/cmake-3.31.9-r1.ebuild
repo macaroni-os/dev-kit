@@ -3,7 +3,7 @@
 
 EAPI=7
 CMAKE_MAKEFILE_GENERATOR="emake"
-CMAKE_REMOVE_MODULES_LIST=( nonde )
+CMAKE_REMOVE_MODULES_LIST=( none )
 SITEFILE="50${PN}-mark.el"
 inherit bash-completion-r1 cmake elisp-common flag-o-matic multiprocessing toolchain-funcs xdg-utils
 
