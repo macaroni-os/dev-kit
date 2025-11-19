@@ -14,7 +14,7 @@ KEYWORDS="*"
 IUSE="minimal"
 src_prepare() {
 	default
-	mv "${WORKDIR}"/UnicodeData-${UNI_PV}.txt unicode || die
+	mv "${WORKDIR}"/miscfiles-UnicodeData-10.0.0.txt unicode || die
 }
 src_configure() {
 	econf --datadir="${EPREFIX%/}"/usr/share/misc
