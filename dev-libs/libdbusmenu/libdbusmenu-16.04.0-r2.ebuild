@@ -28,7 +28,6 @@ RDEPEND="
 # tests also have optional dep on valgrind which we do not enforce
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
-	dev-util/glib-utils
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig
