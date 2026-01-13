@@ -52,6 +52,7 @@ src_install() {
 	fperms +x "${instdir}/${exe}"
 	fperms +x "${instdir}/bin/${exe}"
 	fperms 4711 "${instdir}/chrome-sandbox"
+	fperms +x ${instdir}/resources/app/node_modules/@vscode/ripgrep/bin/rg
 	if [ -e "${ED}"/"${instdir}"/chrome_crashpad_handler ]; then
 	  fperms 4755 "${instdir}"/chrome_crashpad_handler
 	fi
