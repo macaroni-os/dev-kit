@@ -16,7 +16,6 @@ IUSE="test"
 RDEPEND=">=dev-libs/glib-2.22[${MULTILIB_USEDEP}]
 	>=x11-libs/gtk+-3.2:3[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-util/glib-utils
 	virtual/pkgconfig[${MULTILIB_USEDEP}]
 	test? ( dev-util/dbus-test-runner )"
 
