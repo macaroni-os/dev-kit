@@ -12,7 +12,7 @@ LICENSE="MIT"
 SLOT="0/0"
 KEYWORDS="*"
 IUSE="crypt debug python static-libs examples"
-RDEPEND="dev-libs/libxml2:2
+RDEPEND=">=dev-libs/libxml2-2.15.1:2
 	crypt?  ( dev-libs/libgcrypt:0= )
 	python? ( ${PYTHON_DEPS} )
 	
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	
 "
-PDEPEND="python? ( dev-python/libxslt-python )
+PDEPEND="python? ( >=dev-python/libxslt-python-1.1.45 )
 	
 "
 src_prepare() {
