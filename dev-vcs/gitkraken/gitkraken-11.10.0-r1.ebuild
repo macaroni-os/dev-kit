@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 "
 S="${WORKDIR}/gitkraken"
 src_install() {
-	declare GITKRAKEN_HOME=/opt/${PN}
+	declare GITKRAKEN_HOME=/opt/gitkraken
 	# Install gitkraken in /opt
 	dodir ${GITKRAKEN_HOME%/*}
 	mv "${S}" "${ED}"${GITKRAKEN_HOME} || die
@@ -27,9 +27,9 @@ src_install() {
 	doins "${FILESDIR}/gitkraken.png"
 	# Create /usr/bin/gitkraken
 	dodir /usr/bin/
-	echo '#!/bin/sh' > "${ED}"/usr/bin/${PN}
-	echo 'exec /opt/${PN}/${PN} "\$@"' >> "${ED}"/usr/bin/${PN}
-	fperms 0755 /usr/bin/${PN}
+	echo '#!/bin/sh' > "${ED}"/usr/bin/gitkraken
+	echo 'exec /opt/gitkraken/gitkraken "$@"' >> "${ED}"/usr/bin/gitkraken
+	fperms 0755 /usr/bin/gitkraken
 	fperms 4755 /opt/gitkraken/chrome-sandbox
 	insinto /usr/share/applications
 	doins "${FILESDIR}/gitkraken.desktop"
