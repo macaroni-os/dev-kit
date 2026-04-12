@@ -146,7 +146,6 @@ src_install() {
 	    btoa
 	    certutil
 	    cmsutil
-	    conflict
 	    crlutil
 	    derdump
 	    digest
