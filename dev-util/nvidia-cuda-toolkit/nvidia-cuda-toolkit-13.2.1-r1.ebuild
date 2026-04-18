@@ -92,11 +92,11 @@ src_install() {
 	  fi
 	 done
 	 # Fix exec permissions
-	chmod a+x "${D}/${target_path}/bin/*
-	chmod a+x "${D}/${target_path}/nvvm/bin/cicc
+	chmod a+x "${D}"/${target_path}/bin/*
+	chmod a+x "${D}"/${target_path}/nvvm/bin/cicc
 	 # Remove broken links
-	rm "${D}/${target_path}/lib/lib64
-	rm "${D}/${target_path}/include/include
+	rm "${D}"/${target_path}/lib/lib64
+	rm "${D}"/${target_path}/include/include
 	 newenvd "${FILESDIR}"/99cuda.envd 99cuda
 	dodir ${target_path}/pkgconfig
 	insinto ${target_path}/pkgconfig
