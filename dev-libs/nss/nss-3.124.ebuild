@@ -200,10 +200,10 @@ src_install() {
 	  > "${ED}"/etc/prelink.conf.d/nss.conf
 }
 pkg_postinst() {
-	whip h nss.postinst
+	LIBS="/usr/$(get_libdir)" whip h nss.postinst || die "Failed to run whip h nss.postinst"
 }
 pkg_postrm() {
-	whip h nss.postrm
+	LIBS="/usr/$(get_libdir)" whip h nss.postrm || die "Failed to run whip h nss.postrm"
 }
 
 
