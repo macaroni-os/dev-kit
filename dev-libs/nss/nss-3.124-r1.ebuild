@@ -108,7 +108,7 @@ src_install() {
 	 dodir /usr/$(get_libdir)
 	cp -L */lib/*$(get_libname) "${ED}"/usr/$(get_libdir) || die "copying shared libs failed"
 	local i
-	for i in freebl nssb nssckfw ; do
+	for i in crmf freebl nssb nssckfw ; do
 	  cp -L */lib/lib${i}.a "${ED}"/usr/$(get_libdir) || die "copying libs failed"
 	done
 	 # Install nss-config and pkgconfig file
