@@ -24,6 +24,7 @@ RDEPEND="system-java? ( virtual/jre )
 	dev-python/pip
 	
 "
+S="${WORKDIR}/idea-IC-2025.2.6.2"
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 	  einfo "Renaming source directory to predictable name..."
