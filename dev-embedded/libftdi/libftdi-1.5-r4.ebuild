@@ -38,6 +38,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${P}-tests-no-cxx.patch
 	"${FILESDIR}"/${P}-cmake-cxx.patch
+	"${FILESDIR}"/libftdi-1.5-swig-4.3.patch
 )
 
 pkg_setup() {
