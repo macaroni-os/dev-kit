@@ -30,10 +30,6 @@ MAKEOPTS="${MAKEOPTS} -j1" #500574, required for both src_compile() and src_inst
 src_prepare() {
 	default
 	elibtoolize # NOTE: this is for fbsd .so version
-
-	# error: unknown type name 'my_bool'
-	sed -e 's|my_bool value=(context->reconnect)|bool value=(context->reconnect)|g' -i \
-		src/rdf_storage_mysql.c
 }
 
 src_configure() {
