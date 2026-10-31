@@ -24,10 +24,10 @@ SLOT="2"
 KEYWORDS="*"
 PATCHES=(
 	"${FILESDIR}/grub-gfxpayload.patch"
-	"${FILESDIR}/grub-2.02_beta2-KERNEL_GLOBS.patch"
+	"${FILESDIR}/grub-2.14-KERNEL_GLOBS.patch"
 	"${FILESDIR}/grub-2.06-test-words.patch"
 	"${FILESDIR}/grub-2.06-binutils-2.36.patch"
-	"${FILESDIR}/grub-ktype-macaroni.patch"
+	"${FILESDIR}/grub-2.14-ktype-macaroni.patch"
 )
 IUSE="device-mapper doc efiemu +fonts mount nls sdl +themes truetype libzfs
 grub_platforms_coreboot grub_platforms_efi-32 grub_platforms_efi-64
@@ -89,10 +89,13 @@ pkg_setup() {
 src_prepare() {
 	default
 	export PYTHON=true
-	 eautoreconf
-	 # Avoid error due to extra_deps.lst missing from source tarball:
-	#       make[3]: *** No rule to make target 'grub-core/extra_deps.lst', needed by 'syminfo.lst'.  Stop.
-	echo "depends bli part_gpt" > grub-core/extra_deps.lst || die
+
+	eautoreconf
+
+	# Do NOT pre-create grub-core/extra_deps.lst: since 2.14 upstream
+	# generates it in the build dir via a srcdir-less Makefile rule, and a
+	# copy in SRC makes VPATH builds skip the rule, failing syminfo.lst
+	# (macaroni-os/mark-issues#689).
 }
 
 grub_do() {
@@ -105,76 +108,90 @@ grub_do_once() {
 
 grub_configure() {
 	local platform
-	 case ${MULTIBUILD_VARIANT} in
-	  efi*) platform=efi ;;
-	  xen-pvh) platform=xen_pvh ;;
-	  xen*) platform=xen ;;
-	  guessed) ;;
-	  *) platform=${MULTIBUILD_VARIANT} ;;
+
+	case ${MULTIBUILD_VARIANT} in
+		efi*) platform=efi ;;
+		xen-pvh) platform=xen_pvh ;;
+		xen*) platform=xen ;;
+		guessed) ;;
+		*) platform=${MULTIBUILD_VARIANT} ;;
 	esac
-	 case ${MULTIBUILD_VARIANT} in
-	  *-32)
-	    if [[ ${CTARGET:-${CHOST}} == x86_64* ]]; then
-	      local CTARGET=i386
-	    fi ;;
-	  *-64)
-	    if [[ ${CTARGET:-${CHOST}} == i?86* ]]; then
-	      local CTARGET=x86_64
-	      local -x TARGET_CFLAGS="-Os -march=x86-64 ${TARGET_CFLAGS}"
-	      local -x TARGET_CPPFLAGS="-march=x86-64 ${TARGET_CPPFLAGS}"
-	    fi ;;
+
+	case ${MULTIBUILD_VARIANT} in
+		*-32)
+			if [[ ${CTARGET:-${CHOST}} == x86_64* ]]; then
+				local CTARGET=i386
+			fi ;;
+		*-64)
+			if [[ ${CTARGET:-${CHOST}} == i?86* ]]; then
+				local CTARGET=x86_64
+				local -x TARGET_CFLAGS="-Os -march=x86-64 ${TARGET_CFLAGS}"
+				local -x TARGET_CPPFLAGS="-march=x86-64 ${TARGET_CPPFLAGS}"
+			fi ;;
 	esac
-	 local myeconfargs=(
-	  --disable-werror
-	  --program-prefix=
-	  --libdir="${EPREFIX}"/usr/lib
-	  $(use_enable device-mapper)
-	  $(use_enable mount grub-mount)
-	  $(use_enable nls)
-	  $(use_enable themes grub-themes)
-	  $(use_enable truetype grub-mkfont)
-	  $(use_enable libzfs)
-	  --enable-grub-emu-sdl=no
-	  $(use_enable sdl grub-emu-sdl2)
-	  ${platform:+--with-platform=}${platform}
-	   # Let configure detect this where supported
-	  $(usex efiemu '' '--disable-efiemu')
+
+	local myeconfargs=(
+		--disable-werror
+		--program-prefix=
+		--libdir="${EPREFIX}"/usr/lib
+		$(use_enable device-mapper)
+		$(use_enable mount grub-mount)
+		$(use_enable nls)
+		$(use_enable themes grub-themes)
+		$(use_enable truetype grub-mkfont)
+		$(use_enable libzfs)
+		--enable-grub-emu-sdl=no
+		$(use_enable sdl grub-emu-sdl2)
+		${platform:+--with-platform=}${platform}
+
+		# Let configure detect this where supported
+		$(usex efiemu '' '--disable-efiemu')
 	)
-	 local UNIFONT="unifont-15.0.06"
+
+	local UNIFONT="unifont-15.0.06"
 	local DEJAVU="dejavu-sans-ttf-2.37"
-	 if use fonts; then
-	  ln -rs "${WORKDIR}/${UNIFONT}.pcf" unifont.pcf || die
+
+	if use fonts; then
+		ln -rs "${WORKDIR}/${UNIFONT}.pcf" unifont.pcf || die
 	fi
-	 if use themes; then
-	  ln -rs "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
+
+	if use themes; then
+		ln -rs "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
 	fi
-	 local ECONF_SOURCE="${S}"
+
+	local ECONF_SOURCE="${S}"
 	econf "${myeconfargs[@]}"
 }
 
 src_configure() {
 	# Bug 508758.
 	replace-flags -O3 -O2
-	 # Workaround for bug 829165.
+
+	# Workaround for bug 829165.
 	filter-ldflags -pie
-	 # We don't want to leak flags onto boot code.
+
+	# We don't want to leak flags onto boot code.
 	export HOST_CCASFLAGS=${CCASFLAGS}
 	export HOST_CFLAGS=${CFLAGS}
 	export HOST_CPPFLAGS=${CPPFLAGS}
 	export HOST_LDFLAGS=${LDFLAGS}
 	unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
-	 tc-ld-disable-gold #439082 #466536 #526348
+
+	tc-ld-disable-gold #439082 #466536 #526348
 	export TARGET_LDFLAGS="${TARGET_LDFLAGS} ${LDFLAGS}"
 	unset LDFLAGS
-	 tc-export CC NM OBJCOPY RANLIB STRIP
+
+	tc-export CC NM OBJCOPY RANLIB STRIP
 	tc-export BUILD_CC BUILD_PKG_CONFIG
-	 # Force configure to use flex & bison; Gentoo bug 887211.
+
+	# Force configure to use flex & bison; Gentoo bug 887211.
 	export LEX=flex
 	unset YACC
-	 MULTIBUILD_VARIANTS=()
+
+	MULTIBUILD_VARIANTS=()
 	local p
 	for p in "${GRUB_ALL_PLATFORMS[@]}"; do
-	  use "grub_platforms_${p}" && MULTIBUILD_VARIANTS+=( "${p}" )
+		use "grub_platforms_${p}" && MULTIBUILD_VARIANTS+=( "${p}" )
 	done
 	[[ ${#MULTIBUILD_VARIANTS[@]} -eq 0 ]] && MULTIBUILD_VARIANTS=( guessed )
 	grub_do grub_configure
@@ -183,36 +200,43 @@ src_configure() {
 src_compile() {
 	# Sandbox bug 404013.
 	use libzfs && { addpredict /etc/dfs; addpredict /dev/zfs; }
-	 grub_do emake
+
+	grub_do emake
 	use doc && grub_do_once emake -C docs html
 }
 
 src_install() {
 	grub_do emake install DESTDIR="${D}" bashcompletiondir="$(get_bashcompdir)"
 	use doc && grub_do_once emake -C docs install-html DESTDIR="${D}"
-	 einstalldocs
-	 insinto /etc/default
+
+	einstalldocs
+
+	insinto /etc/default
 	newins "${FILESDIR}"/grub.default-4 grub
-	 # https://bugs.gentoo.org/231935
+
+	# https://bugs.gentoo.org/231935
 	dostrip -x /usr/lib/grub
 }
 
 pkg_postinst() {
 	elog "For information on how to configure GRUB2 please refer to the guide:"
 	elog "    https://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
-	 if has_version 'sys-boot/grub:0'; then
-	  elog "A migration guide for GRUB Legacy users is available:"
-	  elog "    https://wiki.gentoo.org/wiki/GRUB2_Migration"
+
+	if has_version 'sys-boot/grub:0'; then
+		elog "A migration guide for GRUB Legacy users is available:"
+		elog "    https://wiki.gentoo.org/wiki/GRUB2_Migration"
 	fi
-	 if [[ -z ${REPLACING_VERSIONS} ]]; then
-	  elog
-	  optfeature "detecting other operating systems (grub-mkconfig)" sys-boot/os-prober
-	  optfeature "creating rescue media (grub-mkrescue)" dev-libs/libisoburn
-	  optfeature "enabling RAID device detection" sys-fs/mdadm
+
+	if [[ -z ${REPLACING_VERSIONS} ]]; then
+		elog
+		optfeature "detecting other operating systems (grub-mkconfig)" sys-boot/os-prober
+		optfeature "creating rescue media (grub-mkrescue)" dev-libs/libisoburn
+		optfeature "enabling RAID device detection" sys-fs/mdadm
 	fi
-	 if has_version sys-boot/os-prober; then
-	  ewarn "Due to security concerns, os-prober is disabled by default."
-	  ewarn "Set GRUB_DISABLE_OS_PROBER=false in /etc/default/grub to enable it."
+
+	if has_version sys-boot/os-prober; then
+		ewarn "Due to security concerns, os-prober is disabled by default."
+		ewarn "Set GRUB_DISABLE_OS_PROBER=false in /etc/default/grub to enable it."
 	fi
 }
 
