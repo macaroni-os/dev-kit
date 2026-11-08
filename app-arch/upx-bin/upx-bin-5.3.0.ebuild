@@ -8,9 +8,9 @@ inherit pax-utils
 DESCRIPTION="UPX - the Ultimate Packer for eXecutables"
 HOMEPAGE="https://upx.github.io"
 SRC_URI="
-amd64? ( https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-amd64_linux.tar.xz -> upx-bin-5.1.1-amd64_linux.tar.xz )
-arm? ( https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-armeb_linux.tar.xz -> upx-bin-5.1.1-armeb_linux.tar.xz )
-arm64? ( https://github.com/upx/upx/releases/download/v5.1.1/upx-5.1.1-arm64_linux.tar.xz -> upx-bin-5.1.1-arm64_linux.tar.xz )"
+amd64? ( https://github.com/upx/upx/releases/download/v5.3.0/upx-5.3.0-amd64_linux.tar.xz -> upx-bin-5.3.0-amd64_linux.tar.xz )
+arm? ( https://github.com/upx/upx/releases/download/v5.3.0/upx-5.3.0-armeb_linux.tar.xz -> upx-bin-5.3.0-armeb_linux.tar.xz )
+arm64? ( https://github.com/upx/upx/releases/download/v5.3.0/upx-5.3.0-arm64_linux.tar.xz -> upx-bin-5.3.0-arm64_linux.tar.xz )"
 LICENSE="NOASSERTION"
 SLOT="0"
 KEYWORDS="*"
@@ -25,8 +25,8 @@ src_install() {
 	doman upx.1
 	dodoc NEWS README*
 	if use doc ; then
-	  local HTML_DOCS=( upx-doc.html )
-	  einstalldocs
+		local HTML_DOCS=( upx-doc.html )
+		einstalldocs
 	fi
 }
 

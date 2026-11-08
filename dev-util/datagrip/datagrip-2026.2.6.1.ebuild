@@ -11,10 +11,10 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 inherit desktop eutils xdg
 
 DESCRIPTION=""
-HOMEPAGE="https://www.jetbrains.com/clion"
+HOMEPAGE="https://www.jetbrains.com/datagrip"
 SRC_URI="
-amd64? ( https://download.jetbrains.com/cpp/CLion-2026.2.3.tar.gz -> clion-2026.2.3-amd64.tar.gz )
-arm64? ( https://download.jetbrains.com/cpp/CLion-2026.2.3-aarch64.tar.gz -> clion-2026.2.3-aarch64.tar.gz )"
+amd64? ( https://download.jetbrains.com/datagrip/datagrip-2026.2.6.1.tar.gz -> datagrip-2026.2.6.1-amd64.tar.gz )
+arm64? ( https://download.jetbrains.com/datagrip/datagrip-2026.2.6.1-aarch64.tar.gz -> datagrip-2026.2.6.1-aarch64.tar.gz )"
 LICENSE="JetBrains"
 SLOT="0"
 KEYWORDS="*"
@@ -24,32 +24,32 @@ RDEPEND="system-java? ( virtual/jre )
 	dev-python/pip
 	
 "
-S="${WORKDIR}/CLion-2026.2.3"
+S="${WORKDIR}/DataGrip-2026.2.6.1"
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "CLion-2026.2.3" || die
+		mv $(ls "${WORKDIR}") "DataGrip-2026.2.6.1" || die
 	fi
 }
 src_install() {
 	patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper jbr/lib/libjcef.so
-	local dir="/opt/clion"
+	local dir="/opt/datagrip"
 	local dst="${D}${dir}"
 	insinto "${dir}"
 	mv "${S}"/* "${dst}"
 	local bundled_script_name="${PN%-*}.sh" # bundled script is always lowercase, and doesn't have -ultimate, -professional suffix.
-	make_wrapper "clion" "${dir}/bin/$bundled_script_name" || die
+	make_wrapper "datagrip" "${dir}/bin/$bundled_script_name" || die
 	local svgfile="$(find ${dst}/bin -maxdepth 1 -iname '*.svg')"
-	newicon $svgfile "clion.svg" || die
+	newicon $svgfile "datagrip.svg" || die
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
-	newicon $pngfile "clion.png" || die
-	make_desktop_entry clion "CLion" clion "Development;IDE;" || die
+	newicon $pngfile "datagrip.png" || die
+	make_desktop_entry datagrip "DataGrip" datagrip "Development;IDE;" || die
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
 	fi
 	if use sysctl; then
 		dodir /etc/sysctl.d
-		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-clion-idea-inotify-watches.conf" || die
+		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-datagrip-idea-inotify-watches.conf" || die
 	fi
 }
 pkg_postinst() {

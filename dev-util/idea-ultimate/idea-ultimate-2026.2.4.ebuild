@@ -11,10 +11,10 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 inherit desktop eutils xdg
 
 DESCRIPTION=""
-HOMEPAGE="https://www.jetbrains.com/phpstorm"
+HOMEPAGE="https://www.jetbrains.com/idea"
 SRC_URI="
-amd64? ( https://download.jetbrains.com/webide/PhpStorm-2026.1.2.tar.gz -> phpstorm-2026.1.2-amd64.tar.gz )
-arm64? ( https://download.jetbrains.com/webide/PhpStorm-2026.1.2-aarch64.tar.gz -> phpstorm-2026.1.2-aarch64.tar.gz )"
+amd64? ( https://download.jetbrains.com/idea/ideaIU-2026.2.4.tar.gz -> idea-ultimate-2026.2.4-amd64.tar.gz )
+arm64? ( https://download.jetbrains.com/idea/ideaIU-2026.2.4-aarch64.tar.gz -> idea-ultimate-2026.2.4-aarch64.tar.gz )"
 LICENSE="JetBrains"
 SLOT="0"
 KEYWORDS="*"
@@ -24,42 +24,42 @@ RDEPEND="system-java? ( virtual/jre )
 	dev-python/pip
 	
 "
-S="${WORKDIR}/PhpStorm-2026.1.2"
+S="${WORKDIR}/idea-IU-2026.2.4"
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
-	  einfo "Renaming source directory to predictable name..."
-	  mv $(ls "${WORKDIR}") "PhpStorm-2026.1.2" || die
+		einfo "Renaming source directory to predictable name..."
+		mv $(ls "${WORKDIR}") "idea-IU-2026.2.4" || die
 	fi
 }
 src_install() {
 	patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper jbr/lib/libjcef.so
-	local dir="/opt/phpstorm"
+	local dir="/opt/idea-ultimate"
 	local dst="${D}${dir}"
 	insinto "${dir}"
 	mv "${S}"/* "${dst}"
 	local bundled_script_name="${PN%-*}.sh" # bundled script is always lowercase, and doesn't have -ultimate, -professional suffix.
-	make_wrapper "phpstorm" "${dir}/bin/$bundled_script_name" || die
+	make_wrapper "idea-ultimate" "${dir}/bin/$bundled_script_name" || die
 	local svgfile="$(find ${dst}/bin -maxdepth 1 -iname '*.svg')"
-	newicon $svgfile "phpstorm.svg" || die
+	newicon $svgfile "idea-ultimate.svg" || die
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
-	newicon $pngfile "phpstorm.png" || die
-	make_desktop_entry phpstorm "PhpStorm" phpstorm "Development;IDE;" || die
+	newicon $pngfile "idea-ultimate.png" || die
+	make_desktop_entry idea-ultimate "IntelliJ IDEA Ultimate" idea-ultimate "Development;IDE;" || die
 	if use system-java; then
-	  rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
+		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
 	fi
 	if use sysctl; then
-	  dodir /etc/sysctl.d
-	  echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-phpstorm-idea-inotify-watches.conf" || die
+		dodir /etc/sysctl.d
+		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-idea-ultimate-idea-inotify-watches.conf" || die
 	fi
 }
 pkg_postinst() {
 	xdg_pkg_postinst
 	if use sysctl; then
-	  ( /etc/init.d/sysctl restart >/dev/null 2>&1 )
-	  einfo "An /etc/sysctl.d file was installed to optimally configure the IDE, with this"
-	  einfo "setting:"
+		( /etc/init.d/sysctl restart >/dev/null 2>&1 )
+		einfo "An /etc/sysctl.d file was installed to optimally configure the IDE, with this"
+		einfo "setting:"
 	else
-	  einfo "JetBrains recommends adding the following to /etc/sysctl.conf:"
+		einfo "JetBrains recommends adding the following to /etc/sysctl.conf:"
 	fi
 	einfo
 	einfo "fs.inotify.max_user_watches = 524288"
@@ -67,7 +67,7 @@ pkg_postinst() {
 	einfo "See https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit for"
 	einfo "more information."
 	if use sysctl; then
-	  einfo "If this change is undesired, set -sysctl in /etc/portage/package.use."
+		einfo "If this change is undesired, set -sysctl in /etc/portage/package.use."
 	fi
 }
 

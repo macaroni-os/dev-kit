@@ -6,7 +6,7 @@ inherit eutils pax-utils xdg-utils
 
 DESCRIPTION="Git GUI client"
 HOMEPAGE="https://www.gitkraken.com/"
-SRC_URI="https://release.gitkraken.com/linux/GitKraken-v12.4.0.tar.gz -> gitkraken-12.4.0-amd64.tar.gz"
+SRC_URI="https://release.gitkraken.com/linux/GitKraken-v12.6.1.tar.gz -> gitkraken-12.6.1-amd64.tar.gz"
 LICENSE="Axosoft, LLC"
 SLOT="0"
 KEYWORDS="*"

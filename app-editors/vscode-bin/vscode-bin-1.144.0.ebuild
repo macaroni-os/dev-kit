@@ -8,8 +8,8 @@ inherit bash-completion-r1 desktop eutils pax-utils xdg
 DESCRIPTION="Open-source code editor"
 HOMEPAGE="https://code.visualstudio.com/"
 SRC_URI="
-amd64? ( https://update.code.visualstudio.com/1.141.0/linux-x64/stable -> vscode-bin-linux-x64-1.141.0.tar.gz )
-arm64? ( https://update.code.visualstudio.com/1.141.0/linux-arm64/stable -> vscode-bin-linux-arm64-1.141.0.tar.gz )"
+amd64? ( https://update.code.visualstudio.com/1.144.0/linux-x64/stable -> vscode-bin-linux-x64-1.144.0.tar.gz )
+arm64? ( https://update.code.visualstudio.com/1.144.0/linux-arm64/stable -> vscode-bin-linux-arm64-1.144.0.tar.gz )"
 LICENSE="Apache-2.0
 BSD
 BSD-1

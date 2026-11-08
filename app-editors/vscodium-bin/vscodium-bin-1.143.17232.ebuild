@@ -7,8 +7,8 @@ inherit desktop eutils pax-utils xdg
 DESCRIPTION="binary releases of VS Code without MS branding/telemetry/licensing"
 HOMEPAGE="https://vscodium.com"
 SRC_URI="
-amd64? ( https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium-linux-x64-1.126.04524.tar.gz -> vscodium-bin-1.126.04524-x64.tar.gz )
-arm64? ( https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium-linux-arm64-1.126.04524.tar.gz -> vscodium-bin-1.126.04524-arm64.tar.gz )"
+amd64? ( https://github.com/VSCodium/vscodium/releases/download/1.143.17232/VSCodium-linux-x64-1.143.17232.tar.gz -> vscodium-bin-1.143.17232-x64.tar.gz )
+arm64? ( https://github.com/VSCodium/vscodium/releases/download/1.143.17232/VSCodium-linux-arm64-1.143.17232.tar.gz -> vscodium-bin-1.143.17232-arm64.tar.gz )"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="*"
@@ -36,19 +36,22 @@ S="${WORKDIR}"
 src_install() {
 	local instdir="/opt/vscodium-bin"
 	local exe="codium"
-	 pax-mark m "${instdir}/${exe}"
+
+	pax-mark m "${instdir}/${exe}"
 	insinto "${instdir}"
 	doins -r *
 	dosym "${instdir}/${exe}" "/usr/bin/vscodium-bin"
 	make_wrapper "vscodium-bin" "${instdir}/${exe}"
 	domenu ${FILESDIR}/vscodium-bin.desktop
 	newicon ${S}/resources/app/resources/linux/code.png vscodium-bin.png
-	 fperms +x "${instdir}/${MY_EXEC}"
+
+	fperms +x "${instdir}/${MY_EXEC}"
 	fperms 4755 "${instdir}/chrome-sandbox"
 	fperms +x "${instdir}/libEGL.so"
 	fperms +x "${instdir}/libGLESv2.so"
 	fperms +x "${instdir}/libffmpeg.so"
-	 #fix Spawn EACESS bug #25848
+
+	#fix Spawn EACESS bug #25848
 	insinto "/usr/share/licenses/vscodium-bin"
 	newins "${S}/resources/app/LICENSE.txt" "LICENSE.txt"
 }

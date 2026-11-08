@@ -10,11 +10,11 @@ QA_PREBUILT="opt/${PN}/bin/fsnotifier
 
 inherit desktop eutils xdg
 
-DESCRIPTION=""
-HOMEPAGE="https://www.jetbrains.com/clion"
+DESCRIPTION="Golang IDE by JetBrains"
+HOMEPAGE="https://www.jetbrains.com/go"
 SRC_URI="
-amd64? ( https://download.jetbrains.com/cpp/CLion-2026.2.2.tar.gz -> clion-2026.2.2-amd64.tar.gz )
-arm64? ( https://download.jetbrains.com/cpp/CLion-2026.2.2-aarch64.tar.gz -> clion-2026.2.2-aarch64.tar.gz )"
+amd64? ( https://download.jetbrains.com/go/goland-2026.2.4.tar.gz -> goland-2026.2.4-amd64.tar.gz )
+arm64? ( https://download.jetbrains.com/go/goland-2026.2.4-aarch64.tar.gz -> goland-2026.2.4-aarch64.tar.gz )"
 LICENSE="JetBrains"
 SLOT="0"
 KEYWORDS="*"
@@ -24,32 +24,32 @@ RDEPEND="system-java? ( virtual/jre )
 	dev-python/pip
 	
 "
-S="${WORKDIR}/CLion-2026.2.2"
+S="${WORKDIR}/GoLand-2026.2.4"
 post_src_unpack() {
 	if [ ! -d "$S" ]; then
 		einfo "Renaming source directory to predictable name..."
-		mv $(ls "${WORKDIR}") "CLion-2026.2.2" || die
+		mv $(ls "${WORKDIR}") "GoLand-2026.2.4" || die
 	fi
 }
 src_install() {
 	patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper jbr/lib/libjcef.so
-	local dir="/opt/clion"
+	local dir="/opt/goland"
 	local dst="${D}${dir}"
 	insinto "${dir}"
 	mv "${S}"/* "${dst}"
 	local bundled_script_name="${PN%-*}.sh" # bundled script is always lowercase, and doesn't have -ultimate, -professional suffix.
-	make_wrapper "clion" "${dir}/bin/$bundled_script_name" || die
+	make_wrapper "goland" "${dir}/bin/$bundled_script_name" || die
 	local svgfile="$(find ${dst}/bin -maxdepth 1 -iname '*.svg')"
-	newicon $svgfile "clion.svg" || die
+	newicon $svgfile "goland.svg" || die
 	local pngfile="$(find ${dst}/bin -maxdepth 1 -iname '*.png')"
-	newicon $pngfile "clion.png" || die
-	make_desktop_entry clion "CLion" clion "Development;IDE;" || die
+	newicon $pngfile "goland.png" || die
+	make_desktop_entry goland "GoLand" goland "Development;IDE;" || die
 	if use system-java; then
 		rm -rf "$dst{jbr,jre{64}}" || die "Failed to remove bundled Java"
 	fi
 	if use sysctl; then
 		dodir /etc/sysctl.d
-		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-clion-idea-inotify-watches.conf" || die
+		echo "fs.inotify.max_user_watches = 524288" > "${D}/etc/sysctl.d/30-goland-idea-inotify-watches.conf" || die
 	fi
 }
 pkg_postinst() {

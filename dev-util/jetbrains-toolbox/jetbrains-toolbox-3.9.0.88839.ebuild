@@ -8,15 +8,15 @@ inherit desktop eutils xdg
 DESCRIPTION=""
 HOMEPAGE="https://www.jetbrains.com/toolbox-app"
 SRC_URI="
-amd64? ( https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.6.3.86383.tar.gz -> jetbrains-toolbox-3.6.3.86383-amd64.tar.gz )
-arm64? ( https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.6.3.86383-arm64.tar.gz -> jetbrains-toolbox-3.6.3.86383-arm64.tar.gz )"
+amd64? ( https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.0.88839.tar.gz -> jetbrains-toolbox-3.9.0.88839-amd64.tar.gz )
+arm64? ( https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.0.88839-arm64.tar.gz -> jetbrains-toolbox-3.9.0.88839-arm64.tar.gz )"
 LICENSE="JetBrains"
 SLOT="0"
 KEYWORDS="*"
 IUSE="+system-java +sysctl"
 DEPEND="sys-fs/fuse:0
 "
-S="${WORKDIR}/jetbrains-toolbox-3.6.3.86383/bin"
+S="${WORKDIR}/jetbrains-toolbox-3.9.0.88839/bin"
 src_install() {
 	keepdir /opt/jetbrains-toolbox
 	insinto /opt/jetbrains-toolbox
